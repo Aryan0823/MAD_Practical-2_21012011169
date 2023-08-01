@@ -29,6 +29,25 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         showMessage("OnResume() method is called")
     }
+
+    override fun onPause() {
+        super.onPause()
+        showMessage("OnPause() method is called")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        showMessage("OnStop() method is called")
+    }
+    override fun onRestart() {
+        super.onRestart()
+        showMessage("OnRestart() method is called")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        showMessage("OnDestroy() method is called")
+    }
     fun showMessage(msg:String){
         Log.i(TAG, "$msg")
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
